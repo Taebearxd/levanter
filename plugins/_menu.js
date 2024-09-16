@@ -28,16 +28,16 @@ bot.addCommand(
 ╰────────────────╯
 
 ╭────────────────
-│ Prefix : ${PREFIX}
-│ User : ${message.pushName}
-│ Time : ${time}
-│ Day : ${date.toLocaleString('en', { weekday: 'long' })}
-│ Date : ${date.toLocaleDateString('hi')}
-│ Version : ${VERSION}
-│ Plugins : ${PLUGINS.count}
-│ Ram : ${getRam()}
-│ Uptime : ${getUptime('t')}
-│ Platform : ${getPlatform()}
+│ 𝐏𝐫𝐞𝐟𝐢𝐱 : ${PREFIX}
+│ 𝐔𝐬𝐞𝐫 : ${message.pushName}
+│ 𝐓𝐢𝐦𝐞 : ${time}
+│ 𝐃𝐚𝐲 : ${date.toLocaleString('en', { weekday: 'long' })}
+│ 𝐃𝐚𝐭𝐞 : ${date.toLocaleDateString('hi')}
+│ 𝐕𝐞𝐫𝐬𝐢𝐨𝐧 : ${VERSION}
+│ 𝐏𝐥𝐮𝐠𝐢𝐧𝐬 : ${PLUGINS.count}
+│ 𝐑𝐚𝐦 : ${getRam()}
+│ 𝐔𝐩𝐭𝐢𝐦𝐞 : ${getUptime('t')}
+│ 𝐏𝐥𝐚𝐭𝐟𝐫𝐨𝐦 : ${getPlatform()}
 ╰────────────────
 ╭────────────────
 `
@@ -95,23 +95,23 @@ bot.addCommand(
     const [date, time] = getDate()
     let msg = `\`\`\`╭═══ 𖥻 𝚩𝚵̸̷𝚫𝐑 ꪜ ═══⊷
 ┃𖹭╭──────────────
-┃𖹭│ Prefix : ${PREFIX}
-┃𖹭│ User : ${message.pushName}
-┃𖹭│ Time : ${time}
-┃𖹭│ Day : ${date.toLocaleString('en', { weekday: 'long' })}
-┃𖹭│ Date : ${date.toLocaleDateString('hi')}
-┃𖹭│ Version : ${VERSION}
-┃𖹭│ Plugins : ${PLUGINS.count}
-┃𖹭│ Ram : ${getRam()}
-┃𖹭│ Uptime : ${getUptime('t')}
-┃𖹭│ Platform : ${getPlatform()}
+┃𖹭│ 𝐏𝐫𝐞𝐟𝐢𝐱 : ${PREFIX}
+┃𖹭│ 𝐔𝐬𝐞𝐫 : ${message.pushName}
+┃𖹭│ 𝐓𝐢𝐦𝐞 : ${time}
+┃𖹭│ 𝐃𝐚𝐲 : ${date.toLocaleString('en', { weekday: 'long' })}
+┃𖹭│ 𝐃𝐚𝐭𝐞 : ${date.toLocaleDateString('hi')}
+┃𖹭│ 𝐕𝐞𝐫𝐬𝐢𝐨𝐧 : ${VERSION}
+┃𖹭│ 𝐏𝐥𝐮𝐠𝐢𝐧𝐬 : ${PLUGINS.count}
+┃𖹭│ 𝐑𝐚𝐦 : ${getRam()}
+┃𖹭│ 𝐔𝐩𝐭𝐢𝐦𝐞 : ${getUptime('t')}
+┃𖹭│ 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 : ${getPlatform()}
 ┃𖹭╰───────────────
 ╰═════════════════⊷\`\`\`\n`
 
     if (match && commands[match]) {
       msg += ` ╭─❏ ${textToStylist(match.toLowerCase(), 'smallcaps')} ❏\n`
       for (const plugin of commands[match])
-        msg += ` │ ${textToStylist(plugin.toUpperCase(), 'mono')}\n`
+        msg += ` │ ${textToStylist(plugin.toUpperCase(), 'calluna')}\n`
       msg += ` ╰─────────────────`
 
       return await message.send(msg)
@@ -119,7 +119,7 @@ bot.addCommand(
     for (const command in commands) {
       msg += ` ╭─❏ ${textToStylist(command.toLowerCase(), 'smallcaps')} ❏\n`
       for (const plugin of commands[command])
-        msg += ` │ ${textToStylist(plugin.toUpperCase(), 'mono')}\n`
+        msg += ` │ ${textToStylist(plugin.toUpperCase(), 'calluna')}\n`
       msg += ` ╰─────────────────\n`
     }
     await message.send(msg.trim())
