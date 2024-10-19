@@ -12,7 +12,7 @@ bot(
     if (match == 'all') {
       let mesaj = ''
       mentionedJid.forEach(
-        (e, i) => (mesaj += `${i + 1}${addSpace(i + 1, participants.length)} @${e.split('@')[0]}\n`)
+        (e, i) => (mesaj += `${i + 1}${addSpace(i + 1, participants.length)} :  ─ 🥡⃞̸ᩙ░  ˖@${e.split('@')[0]}\n`)
       )
       return await message.send('```' + mesaj.trim() + '```', {
         contextInfo: { mentionedJid },
